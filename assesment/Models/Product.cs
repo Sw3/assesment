@@ -14,5 +14,6 @@ namespace assesment.Models
 
         public virtual ICollection<Product> Products { get; set; }
         public virtual ProductCategory category { get; set; }
+        public List<ProductCategory> categories { get; set; }
     }
 }

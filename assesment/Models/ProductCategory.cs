@@ -9,6 +9,11 @@ namespace assesment.Models
     {
         public int ID { get; set; }
         public string CategoryName { get; set; }
-        
+        public virtual ICollection<ProductCategory> productCategory { get; set; }
+
+        public static implicit operator ProductCategory(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

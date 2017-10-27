@@ -97,3 +97,6 @@ c:\Users\Miguel\Documents\Visual Studio 2015\Projects\assesment\assesment\bin\es
 c:\Users\Miguel\Documents\Visual Studio 2015\Projects\assesment\assesment\obj\Debug\assesment.csprojResolveAssemblyReference.cache
 c:\Users\Miguel\Documents\Visual Studio 2015\Projects\assesment\assesment\obj\Debug\assesment.dll
 c:\Users\Miguel\Documents\Visual Studio 2015\Projects\assesment\assesment\obj\Debug\assesment.pdb
+c:\Users\Miguel\Documents\Visual Studio 2015\Projects\assesment\assesment\obj\Debug\assesment.Migrations.upd1.resources
+c:\Users\Miguel\Documents\Visual Studio 2015\Projects\assesment\assesment\obj\Debug\assesment.csproj.GenerateResource.Cache
+c:\Users\Miguel\Documents\Visual Studio 2015\Projects\assesment\assesment\obj\Debug\assesment.Migrations.upd2.resources

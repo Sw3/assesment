@@ -18,6 +18,7 @@ namespace assesment.Controllers
         // GET: Products
         public ActionResult Index()
         {
+            
             return View(db.Products.ToList());
         }
 
@@ -39,6 +40,10 @@ namespace assesment.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
+            List <ProductCategory>list = db.ProductCategories.ToList();         
+                IEnumerable<SelectListItem> lista = db.ProductCategories.Select(b => new SelectListItem { Value = b.ID.ToString(), Text= b.CategoryName});
+
+            ViewData["Categories"] = lista;
             return View();
         }
 
@@ -47,15 +52,16 @@ namespace assesment.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,productNumber,title,price")] Product product)
+        public ActionResult Create(string ID, string productNumber, string title, double price, int Categories)
         {
+            Product product = new Product { productNumber = int.Parse(productNumber), title=title, price= price, category= db.ProductCategories.Where( f => f.ID == Categories).ToList()[0] };
             if (ModelState.IsValid)
             {
+                var r = ViewBag.Categories;
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(product);
         }
 
